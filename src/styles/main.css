@@ -4,7 +4,7 @@
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
-
+/* header styles. my photo, about me and lorem ipsum*/
 header{
     position: relative;
     display: flex;
@@ -37,13 +37,15 @@ header::before{
     max-width: 300px;
     font-size: 3rem;
     position: absolute;
-    bottom: 0.5rem;
+    bottom: -2rem;
     left: 50%;
     z-index: 3;
     transform: translate(-50%, -50%);
     
 }
-
+.content{
+    padding: 1rem 3rem 3rem 3rem
+}
 .about{
     font-size: 2rem;
     text-align: center;
@@ -51,9 +53,6 @@ header::before{
 }
 .lorem{
     font-size: 1.5rem;
-}
-.content{
-    padding: 1rem 3rem 3rem 3rem
 }
 .icons-header{
     margin-top: 0.5rem;
@@ -73,13 +72,58 @@ header::before{
 
 
 
+/* Main styles, grid and layout with examples of projects. */
 main{
-    padding: 1rem;
-    background-color: violet;
+    padding: 3rem;
+}
+.my-work{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 .grid-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+.project-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
 }
+.ss-project{
+}
+.image-project{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.project-info{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1rem;
+}
+.project-name{
+    font-size: 1.5rem;
+}
+.project-icons{
+    display: flex;
+    justify-content: space-between;
+}
+.project-description{
+    padding: 0 1rem 1rem 1rem;
+}
+
+
+
 .footer{
     background-color: green;
 }
