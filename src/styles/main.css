@@ -6,28 +6,15 @@
 }
 /* header styles. my photo, about me and lorem ipsum*/
 header{
-    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+}
+.wrapper{
 
-}
-header::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgb(0, 136, 151);
-    z-index: 0;
-    clip-path: polygon(100% 0, 0 0, 0 90%, 100% 50%);
-}
-.img-container{
-    padding: 3rem 3rem 0rem 3rem;
-    z-index: 1;
-   
+    margin: 3rem 3rem;
 }
 .image{
-    height: 100%;
     width: 100%;
 }
 
@@ -44,7 +31,7 @@ header::before{
     
 }
 .content{
-    padding: 1rem 3rem 3rem 3rem
+    margin-top: 2rem;
 }
 .about{
     font-size: 2rem;
@@ -95,8 +82,6 @@ main{
     max-width: 300px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
-}
-.ss-project{
 }
 .image-project{
     width: 100%;
@@ -177,7 +162,12 @@ footer{
     object-fit: cover;
 }
 
-@media screen and (min-width: 700px) and (max-width: 1024px){
+@media screen and (min-width: 500px){
+    .project-container{
+        max-width: 600px;
+    }
+}
+@media screen and (min-width: 700px){
     .grid-layout{
         grid-template-columns: 1fr 1fr;
     }
@@ -193,5 +183,76 @@ footer{
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
+    }
+    .content{
+        line-height: 1.8;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+        margin-top: 5rem;
+        margin-left: 3rem;
+    }
+    .about{
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    .lorem{
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .image{
+        float: left;
+        max-width: 320px;
+        margin-right: 2rem
+    }
+    .icons-header{
+        display: none;
+    }
+    footer{
+        background-color: rgb(0, 136, 151);
+    }
+    .image-footer{
+        padding: 3rem;
+    }
+    .footer-icons-container{
+        justify-content: start;
+    }
+}
+@media screen and (min-width: 1025px){
+    .image{
+        object-fit: cover;
+        max-height: 600px;
+        max-width: 480px;
+        object-position: center top;
+    }
+    .about{
+        padding-top: 0.5rem;
+        text-align: left;
+        font-size: 3rem;
+    }
+    .content{
+        margin-top: 2rem;
+    }
+    .grid-layout{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+@media screen and (min-width: 1400px){
+    .about{
+        font-size: 3rem;
+    }
+    .lorem{
+        font-size: 2rem;
+    }
+    .my-work{
+        font-size: 3rem;
+        justify-self: center;
+    }
+    h1{
+        font-size: 3rem;
+
+    }
+    .info-footer{
+        font-size: 2rem;
     }
 }
