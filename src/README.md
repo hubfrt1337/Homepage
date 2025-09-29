@@ -1,4 +1,5 @@
 # Homepage project
+![Homepage Preview](./images/homepage.png)
 
 ## Description
 A responsive homepage designed to work seamlessly across all devices.
@@ -9,3 +10,6 @@ Includes clickable links to real projects, allowing users to explore them direct
  cd Homepage
  npm install
  npm run start
+
+ ## Live Preview
+ https://hubfrt1337.github.io/Homepage/
