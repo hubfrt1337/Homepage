@@ -21,7 +21,19 @@ header::before{
     z-index: 1;
     margin: 3rem 3rem;
 }
-
+.opak{
+    position: relative;
+    z-index: 2;
+}
+.text{
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 4rem;
+    word-wrap: normal;
+    text-align: center;
+    bottom: 0;
+}
 .image{
     width: 100%;
 }
@@ -66,7 +78,9 @@ header::before{
 .platforms-icons:hover{
     background-color: grey;
 }
-
+.tablet-text{
+    display: none;
+}
 
 
 /* Main styles, grid and layout with examples of projects. */
@@ -182,6 +196,23 @@ footer{
     }
 }
 @media screen and (min-width: 700px){
+    .text{
+        display: none;
+    }
+    .content{
+        position: relative;
+    }
+    .tablet-text{
+        position: absolute;
+        display: block;
+        z-index: 4;
+        left: 180px;
+        font-size: 3rem;
+        color: white;
+        top: -80px;
+        width: 400px;
+        font-weight: bold;
+    }
     header::before{
         clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%, 0 100%);
     }
@@ -219,7 +250,8 @@ footer{
     .image{
         float: left;
         max-width: 320px;
-        margin-right: 2rem
+        margin-right: 2rem;
+        z-index: 4;
     }
     .icons-header{
         display: none;
@@ -235,16 +267,39 @@ footer{
     }
 }
 @media screen and (min-width: 1025px){
+    .tablet-text{
+        display: none;
+    }
+    .text{
+        display: block;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .opak{
+        width: 400px;
+        height: 100%;
+    }
+    .content{
+        position: static;
+        margin-left: 0;
+        padding-left: 15px;
+        margin-bottom: 50px;
+    }
     .image{
+        float: none;
         object-fit: cover;
         max-height: 600px;
         max-width: 480px;
         object-position: center top;
+        margin: 0;
     }
     .about{
         padding-top: 0.5rem;
         text-align: left;
         font-size: 3rem;
+        padding-left: 15px;
     }
     .content{
         margin-top: 2rem;
